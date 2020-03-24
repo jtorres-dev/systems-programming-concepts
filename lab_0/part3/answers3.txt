@@ -1,0 +1,3 @@
+The differences between the copyij and copyji is that copyji has to jump to multiple different address to go to different parts of memory to retrieve just one element from one array, then proceeds to jump to another array at a different address which can be quite tedious. Because of the way that memory is stored (as arrays in bytes), this leads to a drastic slow down.
+
+In copyij, the first address is called in memory and increments by bytes in the same address instead of jumping to a different address to fill in the array entirely. The arrayij stays in one address and fills out completely, then jumps to the next array and fills it out and continues till it reaches the last array with its last element. Therefore, in exectution, the copyij is faster. 

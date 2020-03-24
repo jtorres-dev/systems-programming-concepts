@@ -1,0 +1,19 @@
+Running both: 
+time gcc array_copyij.c -O3
+
+real    0m0.092s
+user    0m0.075s
+sys     0m0.009s
+
+
+time gcc array_copyji.c -O3
+
+real	0m0.073s
+user	0m0.053s
+sys	0m0.014s
+___________________________
+
+
+Resulted in array_copyji compiling faster than array_copyij from realtime. It could be that the register addresses are processed a lot faster and are loaded to main memory first thing on the array_copyji for all the possible arrays. When the registers are delayed by the array indices on array_copyij, it has to process all the bytes through memory first which is slower than cache, from the first addressed array, then move on to the next array which can be a bit slower since it hasn't accessed the newer addresses in memory. 
+
+In copy_arrayji, the addresses are known and are ready to operate on the contents to send to the ALU. This process is much faster because of registers being faster memory than RAM memory. 

@@ -1,0 +1,13 @@
+start eval with:
+int bg;
+char *argv[MAXARGS];
+
+bg = parseline(cmdline, argv);
+
+fork() and check for error( < 0)
+
+if (pid == 0) to begin child-only code
+
+execve (argv[0], argv, environ)
+//no need to use strcpy()
+

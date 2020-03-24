@@ -1,0 +1,4 @@
+Homework Question:
+What are the differences between hello.c and hello.i? Put your answers in this file to handin.
+
+The differences between hello.c and hello.i is that hello.c contains everything that hello.i does. What that means is that hello.i is created to include the headers that have been noted inside of the hello.c source code and makes it available to the hello.c program. The preprocessing phase takes any directives which start with '#', and inserts it to the hello.c source code. 

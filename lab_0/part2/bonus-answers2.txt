@@ -1,0 +1,1 @@
+These aren't the same because 35 is the representation for the decimal value for #, whereas 23 is the hexdecimal representation in ASCII/UNICODE for #.
